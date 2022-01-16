@@ -1,32 +1,34 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+    <Navbar />
+    <main class="main">
+    </main>
     <router-view/>
   </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+import Navbar from './views/Navbar.vue'
 
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+export default {
+  components: {
+    Navbar,
   }
 }
+</script>
+
+
+<style lang="scss">
+  @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@200;700;800;900&family=Neonderthaw&family=Noto+Sans&family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap');
+  @import 'assets/scss/main.scss';
+  @import 'assets/scss/reset.scss';
+  @import 'assets/scss/mixin.scss';
+
+  #app {
+    font-family: $mainEnglishWords;
+    text-align: center;
+    color: $black;
+  }
+
 </style>
+
