@@ -1,6 +1,6 @@
 <template>
   <nav class="navbar">
-    <div class="container">
+    <div class="navbar-container">
       <h1 class="navbar-title">PORTFOLIO</h1>
       <label for="navbar-toggle" class="navbar-toggle-label" >
         <i class="far fa-caret-square-down hamburger"></i>
@@ -27,11 +27,11 @@
   </nav>
 </template>
 
-<style scoped lang="scss">
+<style lang="scss">
   @import '../assets/scss/main.scss';
-  @import '../assets/scss/mixin.scss';
   .navbar {
     position: fixed;
+    z-index: 10;
     width: 100%;
     height: 110px;
     background-color: $darkGray;
@@ -39,8 +39,7 @@
     @include pad {
       height: 180px;
     }
-    .container {
-      position: relative;
+    .navbar-container {
       width: 100%;
       height: 100%;
       @include flex (row, space-around, center);
